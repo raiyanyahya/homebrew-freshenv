@@ -3,14 +3,19 @@ class Freshenv < Formula
 
   desc "Provision and manage local developer environments"
   homepage "https://github.com/raiyanyahya/freshenv"
-  url "https://files.pythonhosted.org/packages/df/55/56d0c0ebd259faaf5d2b4477351608c03e37b66ecb690e2fc273f7719ab5/freshenv-0.1.9.tar.gz"
-  sha256 "ead958d2acbd53b2b2be542d2ef7da5d55d049d92c7cd2573281dc993006c0f0"
+  url "https://files.pythonhosted.org/packages/2d/cc/d15ef1fbf1eb10b06f4dbafcb75d1bbcd3a21190f21e603bd55f7bb1e0c4/freshenv-0.3.2.tar.gz"
+  sha256 "6211eb8bab73ba3b06788d750e20b0bd9e45414a725f3338ff11a77ede428469"
   license "MIT"
-  depends_on "python@3.9"
+  depends_on "python@3.6"
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/f4/09/ad003f1e3428017d1c3da4ccc9547591703ffea548626f47ec74509c5824/click-8.0.3.tar.gz"
-    sha256 "410e932b050f5eed773c4cda94de75971c89cdb3155a72a0831139a79e5ecb5b"
+    url "https://files.pythonhosted.org/packages/dd/cf/706c1ad49ab26abed0b77a2f867984c1341ed7387b8030a6aa914e2942a0/click-8.0.4.tar.gz"
+    sha256 "8458d7b1287c5fb128c90e23381cf99dcde74beaf6c7ff6384ce84d6fe090adb"
+  end
+
+  resource "click-default-group" do
+    url "https://files.pythonhosted.org/packages/22/3a/e9feb3435bd4b002d183fcb9ee08fb369a7e570831ab1407bc73f079948f/click-default-group-1.2.2.tar.gz"
+    sha256 "d9560e8e8dfa44b3562fbc9425042a0fd6d21956fcc2db0077f63f34253ab904"
   end
 
   resource "colorama" do
@@ -31,11 +36,6 @@ class Freshenv < Formula
   resource "dockerpty" do
     url "https://files.pythonhosted.org/packages/8d/ee/e9ecce4c32204a6738e0a5d5883d3413794d7498fe8b06f44becc028d3ba/dockerpty-0.4.1.tar.gz"
     sha256 "69a9d69d573a0daa31bcd1c0774eeed5c15c295fe719c61aca550ed1393156ce"
-  end
-
-  resource "freshenv" do
-    url "https://files.pythonhosted.org/packages/df/55/56d0c0ebd259faaf5d2b4477351608c03e37b66ecb690e2fc273f7719ab5/freshenv-0.1.9.tar.gz"
-    sha256 "ead958d2acbd53b2b2be542d2ef7da5d55d049d92c7cd2573281dc993006c0f0"
   end
 
   resource "Pygments" do
